@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 서버에 데이터를 전달하기 위한 form 타입 -->
+    <form>
+        <!-- 한줄을 차지할 수 있게끔 하는 블럭형 컨테이너 div 테그 -->
+        <!-- text : 기본적인 글자를 입력할 수 있는 입력 테그-->
+        <div>
+            <label for="check">이름:</label>
+            <input type="text" id="username">
+        </div>
+        <div>
+            <!-- label 태그를 사용해서 체크박스를 클릭한 것처럼 상호 작용 -->
+            <!-- 해당 input 태그에 id값을 label태그에 있는 for 값과 동일한 값을 가지게끔만 하면 된다. -->
+            <label for="check">체크하시겠습니까?</label>
+            <input type="checkbox" id="check" name=q>
+        </div>
+        <!-- 서버에 데이터를 최종적으로 제출하는 버튼 -->
+        <input type="submit" value="제출">
+    </form>
+</body>
+</html>
