@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <h1>Portfolio</h1>
+    <h2>My name is Aiden</h2>
+    <p>I am a student at the University of Washington.<br>
+    I am studying computer science and I am a junior</p>
+
+    <!-- 이미지와 글자를 한 줄에다가 출력해보세요 -->
+    <img src = 'https://i.namu.wiki/i/w11dbZZeomJI4bD3_KItw3vq7tgglcM1YQA_xHULxMsixPpY1S7KcB8WrEFhJNuSuejiiQkicGKMH12JvpUqBQ.webp' alt>
+    <!-- 컨텐치 영역만큼만 차지하는 인라인 요소 태그 사용 img, span -->
+    <span>아에이오우</span>
+    <a href = 'hwan7185@gmail.com'>메일로 가기</a>
+    <!-- p, h 태그는 블록 요소들, 한줄을 통채로 차지한다. -->
+    <p>누구세요</p>
+</body>
+</html>
