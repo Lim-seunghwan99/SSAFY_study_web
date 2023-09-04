@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 전체 선택자 (잘 안쓰임) */
+    h1 {
+      color: red;
+    }
+    /* 모든 h2 요소의 텍스트 색을 주황색으로 변경 */
+    /* 요소 선택자 (잘 안쓰임) */
+    h2 {
+      color: orange;
+    }
+    /* 요소선택자 여러개 선택 (잘 안쓰임) */
+    h3, h4 {
+      color: blue;
+    }
+    /* 아래의 클래스 선택자가 가장 많이 쓰인다. */
+    /* 이유 : 재사용성, 명시도 등에서 유리 */
+    .green {
+      color: green
+    }
+    /* 아이디 선택자 (잘 안쓰임) */
+    #purple {
+      color: purple;
+    }
+
+    /* 자식 결합자 */
+    .green > span {
+      font-size: 50px;
+    }
+    /* 자손 결합자 */
+    .green li {
+      color: brown;
+    }
+
+  </style>
+</head>
+<body>
+  <h1 class="green">Heading</h1>
+  <h2>선택자</h2>
+  <h3>연습</h3>
+  <h4>반가워요</h4>
+  <p id="purple">과목 목록</p>
+  <ul class="green">
+    <li>파이썬</li>
+    <li>알고리즘</li>
+    <li>웹
+      <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>PYTHON</li>
+      </ol>
+    </li>
+  </ul>
+  <p class="green">Lorem, <span>ipsum</span> dolor.</p>
+</body>
+
+</html>
