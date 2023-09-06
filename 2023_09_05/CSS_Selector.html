@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* 요소 선택자 : HTML 요소 이름을 사용해서 선택 */
+        p {
+            /* 스타일 속성 */
+            background-color: yellow;
+            font-weight: 600;
+        }
+        /* 클래스 선택자 : HTML 요소의 .클래스 사용하여 선택 */
+        .first {
+            background-color: skyblue;
+        }
+
+        /* ID 선택자 : HTML 요소의 #아이디를 사용해서 선택 */
+        #song-name {
+            font-size: 24px;
+        }
+        /* 속성 선택자 : [속성이름="값"]특정 요소가 있는 값을 기반으로 선택*/
+        [data-toggle="modal"]{
+            font-size: 30px;
+        }
+
+        /* 자식 선택자 : 특정 요소의 바로 아래 자식의 요소를 부모>자식 선택하는 방식이다. */
+        div > p {
+            text-decoration: underline;
+        }
+        /* 자손 선택자 : 특정 요소 아래의 모든 하위 요소를 선택 부모" "자손*/
+        body span {
+            border: 1px solid black;
+        }
+
+        /* 인접 형제 선택자 : + 해당 요소 바로 뒤에 있는 형제 요소를 선택*/
+        h3 + p{
+            border: 3px dotted black;
+        }
+
+        /* 일반 형제 선택자 : ~ 해당 요소 뒤에 있는 모든 형제 요소를 */
+        h4 ~ i {
+            text-decoration: overline;
+        }
+
+        /* 의사 클래스 선택자 (Pseudo{가상의}-class) : '요소:특정상태' 특정 상태일 때 요소를 선택*/
+        button:hover{/*해당 요소에 마우스를 올려놨을 때 hover*/
+            text-decoration: underline;
+        }
+        button:active{/*해당 요소를 클릭하였을 때 (활성화 되었을 때)*/
+            color: red;
+        }
+
+        input:focus{/*해당 요소가 포커스를 받았을 때*/
+            border: 3px solid red;
+        }
+
+        div>p:first-child{/* div 태그 아래에 있는 첫번째 자식*/
+            color: blue;
+        }
+
+        div>p:last-child{ /*div 태그 아래에 있는 마지막 자식 */
+            color: purple;
+        }
+
+        /* n번째에 있는 자식을 선택 
+        일단 n번째 자식인지를 보고, 카운트+1.. 해당 요소가 맞는지를 확인한다.*/
+        /* 2n이면 짝수, 2n+1이면 홀수*/
+        p:nth-child(2n){
+            padding: 10px;
+        }
+        /* 아래와 유사한 코드 위를 더 많이 쓴다.*/
+        /* 특정 타입이면서도 n번째 있는 자식을 선택 */
+        p:nth-of-type(2n){
+            margin: 10px;
+        }
+
+        /* 의사 요소 선택자 (Pseudo{가상의}-element) */
+        p::after {/*요소의 컨텐츠를 추가할 뒤에 가상 요소를 생성하도록 도와주는 선택자*/
+            content: "<- "
+        }
+
+        /* p::before{
+             content: "->";
+        } */
+
+        p::first-line{
+            text-decoration-line: underline;
+        }
+
+        p::first-letter{
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 id="song-name">애국가</h3>
+    <p class="first">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세.</p>
+    <p>남산 위에 저 소나무 철갑을 두른듯 바람서리 불변함은 우리 기상일세.</p>
+    <h3>애국가</h3>
+    <div>
+        <p>가을 하늘 공활한데 높고 구름 없이 밝은 달은 우리 가슴 일편 단심일세.</p>
+        <p>이 기상과 이 맘으로 충성을 다하여 괴로우나 즐거우나 나라 사랑하세.</p>
+    </div>
+    <span>~~~</span>
+    <h4>후렴</h4>
+    <i>후렴 무궁화 삼천리 화려강산 대한 사람 대한으로 길이 보전하세.</i><br>
+    <i>후렴 무궁화 삼천리 화려강산 대한 사람 대한으로 길이 보전하세.</i>
+    <span>asdfasdfasdf</span>
+    <i>sadfsdafsfda</i>
+    <button data-toggle="modal">버튼</button>
+</body>
+</html>
