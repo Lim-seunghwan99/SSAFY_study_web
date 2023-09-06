@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Position</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 1500px;
+    }
+
+    .container {
+      position: relative;
+      height: 300px;
+      width: 300px;
+      border: 1px solid black;
+    }
+
+    .box {
+      height: 100px;
+      width: 100px;
+      border: 1px solid black;
+    }
+
+    .static {
+      /* 기본값 포지션을 주석처리해도 변화가 없다. */
+      position: static;
+      background-color: lightcoral;
+    }
+
+    .absolute {
+      /* relative와 다르게 절대적인 위치변경을 가진다. */
+      /* 본인의 영역을 버리고 떠난다. 다른 레이아웃이 변경된다. */
+      /* absolute의 기준은 스태틱이 아닌 부모를 찾는다. */
+      position: absolute;
+      background-color: lightgreen;
+      top: 100px;
+      left: 100px;
+    }
+
+    .relative {
+      /* 스태틱 시전위치에서 이동한다. */
+      /* 스태틱 위치가 변하면 상대위치 또한 바뀐 상황에 따라 바뀐다. */
+      position: relative;
+      background-color: lightblue;
+      top: 100px;
+      left: 100px;
+      /* 우측 하단으로 100px씩 이동해라 */
+    }
+
+    .fixed {
+      /* 위치를 브라우저(화면 영역)에 고정한다. */
+      position: fixed;
+      background-color: gray;
+      top: 0;
+      right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box static">Static</div>
+    <div class="box absolute">Absolute</div>
+    <div class="box relative">Relative</div>
+    <div class="box fixed">Fixed</div>
+  </div>
+</body>
+
+</html>

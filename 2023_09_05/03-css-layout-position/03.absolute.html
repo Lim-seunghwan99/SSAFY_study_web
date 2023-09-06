@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .card {
+      /* border가 있어서 기준점으로 준다 */
+      position: relative;
+      width: 300px;
+      height: 200px;
+      border: 1px solid black;
+      top: 100px
+    }
+
+    .card-content {
+      padding: 10px;
+    }
+
+    .badge {
+      position: absolute;
+      background-color: red;
+      color: white;
+      padding: 5px 10px;
+      /* 우측 상단에 잡기 위해서 */
+      top: 0;
+      right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="card-content">
+      <h3>Card Title</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <span class="badge">New</span>
+    </div>
+  </div>
+</body>
+
+</html>
