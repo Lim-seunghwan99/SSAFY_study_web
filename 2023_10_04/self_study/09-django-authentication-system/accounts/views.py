@@ -9,6 +9,7 @@ def login(request):
         form = AuthenticationForm(request, request.POST)
         # form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():
+            # 로그인 (세션 데이터 생성)
             auth_login(request, form.get_user())
             return redirect('articles:index')
     else:
