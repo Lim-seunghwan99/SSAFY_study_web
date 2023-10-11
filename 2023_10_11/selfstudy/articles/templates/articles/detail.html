@@ -14,25 +14,28 @@
   <p>작성 시각: {{ article.created_at }}</p>
   <p>수정 시각: {{ article.updated_at }}</p>
   <hr>
-  {% comment %} 첫번째 {% endcomment %}
-  <form action="#" method="POST">
-    {% csrf_token %}
-    {{ comment_form }}
-    <input type="submit">
-  </form>
-  {% comment %} 두번째 {% endcomment %}
-  <form action="{% url 'articles:comments_create' article.pk %}" method="POST">
-    {% csrf_token %}
-    {{ comment_form }}
-    <input type="submit">
-  </form>
-  {% comment %} 세번째 {% endcomment %}
+  {% comment %} 다섯 번째 {% endcomment %}
+  {% comment %} {% for comment in comments %}
+    <li>
+      {{ comment.content }}
+      <form action="{% url "articles:comments_delete" article.pk comment.pk %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="DELETE">
+      </form>
+    </li> {% endcomment %}
+  {% comment %} {% empty %}
+    <p>댓글이 없어요..</p>
+  {% endfor %}
+  {{ comments|length }}
+  {{ article.comment_set.all|length }}
+  {{ article.comment_set.count }} {% endcomment %}
   <h4>댓글 목록</h4>
-  <ul>
+  {% comment %} 세번째 {% endcomment %}
+  {% comment %} <ul>
     {% for comment in comments %}
       <li>{{ comment.content }}</li>
     {% endfor %}
-  </ul>
+  </ul> {% endcomment %}
   {% comment %} 네번째 {% endcomment %}
   <ul>
     {% for comment in comments %}
@@ -40,27 +43,17 @@
         {{ comment.content }}
         <form action="{% url "articles:comments_delete" article.pk comment.pk %}" method="POST">
           {% csrf_token %}
-          <input type="submit" value="DELETE">
+          <input type="submit" value="삭제">
         </form>
       </li>
     {% endfor %}
   </ul>
-  {% comment %} 다섯 번째 {% endcomment %}
-  {% for comment in comments %}
-    <li>
-      {{ comment.content }}
-      <form action="{% url "articles:comments_delete" article.pk comment.pk %}" method="POST">
-        {% csrf_token %}
-        <input type="submit" value="DELETE">
-      </form>
-    </li>
-  {% empty %}
-    <p>댓글이 없어요..</p>
-  {% endfor %}
-  {{ comments|length }}
-  {{ article.comment_set.all|length }}
-  {{ article.comment_set.count }}
-
+  {% comment %} 두번째 {% endcomment %}
+  <form action="{% url 'articles:comments_create' article.pk %}" method="POST">
+    {% csrf_token %}
+    {{ comment_form }}
+    <input type="submit">
+  </form>
   <a href="{% url "articles:update" article.pk %}">UPDATE</a>
   <form action="{% url "articles:delete" article.pk %}" method="POST">
     {% csrf_token %}

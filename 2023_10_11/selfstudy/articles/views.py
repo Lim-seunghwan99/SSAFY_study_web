@@ -16,6 +16,7 @@ def index(request):
 def detail(request, pk):
 	article = Article.objects.get(pk=pk)
 	comment_form = CommentForm()
+    # 특정 게시글의 모든 댓글을 조회(역참조)
 	comments = article.comment_set.all()
 	context = {
 		'article': article,
@@ -65,11 +66,19 @@ def update(request, pk):
 
 
 def comments_create(request, pk):
+    # 게시글 조회(어떤 게시글에 달리는 지 할당)
 	article = Article.objects.get(pk=pk)
+    # CommentForm으로 사용자로부터 입력 받은 데이터
 	comment_form = CommentForm(request.POST)
+    # 유효성 검사 진행
+    # create와의 차이점 comments_create는 항상 포스트로 받기 때문에
+    # get과 포스트로 구분할 필요가 없다.
 	if comment_form.is_valid():
 		comment = comment_form.save(commit=False)
+        # DB에 저장하지 않고 인스턴스만 반환하는 코드
+        # 인스턴스만 제공하고, 
 		comment.article = article
+        # 필요한 데이터가 있다면 여기서 추가해라
 		comment_form.save()
 		return redirect('articles:detail', article.pk)
 	context = {
@@ -80,6 +89,8 @@ def comments_create(request, pk):
 
 
 def comments_delete(request, article_pk, comment_pk):
+    # 댓글 조회
 	comment = Comment.objects.get(pk=comment_pk)
 	comment.delete()
 	return redirect('articles:detail', article_pk)
+
