@@ -97,9 +97,19 @@ def comments_delete(request, article_pk, comment_pk):
 
 @login_required
 def likes(request, article_pk):
-	article = Article.objects.get(pk=article_pk)
-	if request.user in article.like_users.all():
-		article.like_users.remove(request.user)
-	else:
-		article.like_users.add(request.user)
-	return redirect('articles:index')
+    # 별도의 페이지 필요? No (게시글이 출력되는 페이지에 같이 좋아요 버튼이 출력됨)
+    article = Article.objects.get(pk=article_pk)
+    # 좋아요를 추가 or 취소 할지에 대한 기준??
+    # 현재 좋아요 버튼을 누른 유저가 
+    # 어디(현재 게시글에 좋아요를 누른 유저 목록 전체)에 있는지 없는지를 확인
+    if request.user in article.like_users.all():
+        # 취소
+        # request.user.like_articles.remove(article)
+        # M 대 M 관계이기 때문에 request 시점에서 지울 수도 있고,
+        # article 시점에서 지울 수도 있다. 위와 같은 코드
+        article.like_users.remove(request.user)
+    else:
+        # 추가
+        # request.user.like_articles.add(article)
+        article.like_users.add(request.user)
+    return redirect('articles:index')
