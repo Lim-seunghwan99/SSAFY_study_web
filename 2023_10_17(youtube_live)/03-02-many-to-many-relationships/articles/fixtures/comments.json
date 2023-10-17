@@ -1,0 +1,189 @@
+[
+{
+    "model": "articles.comment",
+    "pk": 1,
+    "fields": {
+        "article": 2,
+        "user": 1,
+        "content": "ㅁㄴㅇㄻㄴㅇ",
+        "created_at": "2023-10-17T00:20:13.584Z",
+        "updated_at": "2023-10-17T00:20:13.584Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 2,
+    "fields": {
+        "article": 1,
+        "user": 1,
+        "content": "ㅁㄴㅇㅁㄴ",
+        "created_at": "2023-10-17T00:20:19.490Z",
+        "updated_at": "2023-10-17T00:20:19.490Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 3,
+    "fields": {
+        "article": 1,
+        "user": 1,
+        "content": "ㅁㄴㅇㅁ",
+        "created_at": "2023-10-17T00:20:21.087Z",
+        "updated_at": "2023-10-17T00:20:21.087Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 4,
+    "fields": {
+        "article": 1,
+        "user": 1,
+        "content": "ㅂㅈㄷ",
+        "created_at": "2023-10-17T00:20:22.676Z",
+        "updated_at": "2023-10-17T00:20:22.676Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 5,
+    "fields": {
+        "article": 2,
+        "user": 1,
+        "content": "ㅂㅈㄱㄱㄴㅇㄳ",
+        "created_at": "2023-10-17T00:20:28.290Z",
+        "updated_at": "2023-10-17T00:20:28.290Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 6,
+    "fields": {
+        "article": 2,
+        "user": 1,
+        "content": "ㅂㅈㄷㄱㅂㄱㅈ",
+        "created_at": "2023-10-17T00:20:30.059Z",
+        "updated_at": "2023-10-17T00:20:30.059Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 7,
+    "fields": {
+        "article": 2,
+        "user": 1,
+        "content": "ㅂㅈㄱㄴㅇㅀ",
+        "created_at": "2023-10-17T00:20:32.303Z",
+        "updated_at": "2023-10-17T00:20:32.303Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 8,
+    "fields": {
+        "article": 3,
+        "user": 2,
+        "content": "asdasd",
+        "created_at": "2023-10-17T01:23:05.463Z",
+        "updated_at": "2023-10-17T01:23:05.463Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 9,
+    "fields": {
+        "article": 3,
+        "user": 2,
+        "content": "asfzxcv",
+        "created_at": "2023-10-17T01:23:06.944Z",
+        "updated_at": "2023-10-17T01:23:06.944Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 10,
+    "fields": {
+        "article": 3,
+        "user": 2,
+        "content": "qwerwqet",
+        "created_at": "2023-10-17T01:23:08.598Z",
+        "updated_at": "2023-10-17T01:23:08.598Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 11,
+    "fields": {
+        "article": 3,
+        "user": 2,
+        "content": "zxcbxvzcb",
+        "created_at": "2023-10-17T01:23:10.145Z",
+        "updated_at": "2023-10-17T01:23:10.145Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 12,
+    "fields": {
+        "article": 2,
+        "user": 2,
+        "content": "adsasdzxcvbmh",
+        "created_at": "2023-10-17T01:23:20.019Z",
+        "updated_at": "2023-10-17T01:23:20.019Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 13,
+    "fields": {
+        "article": 3,
+        "user": 1,
+        "content": "sad",
+        "created_at": "2023-10-17T01:23:42.881Z",
+        "updated_at": "2023-10-17T01:23:42.881Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 14,
+    "fields": {
+        "article": 3,
+        "user": 1,
+        "content": "bnmh",
+        "created_at": "2023-10-17T01:23:44.766Z",
+        "updated_at": "2023-10-17T01:23:44.766Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 15,
+    "fields": {
+        "article": 2,
+        "user": 1,
+        "content": "wetqrqw",
+        "created_at": "2023-10-17T01:23:49.470Z",
+        "updated_at": "2023-10-17T01:23:49.470Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 16,
+    "fields": {
+        "article": 1,
+        "user": 2,
+        "content": "asdasdzxcb",
+        "created_at": "2023-10-17T01:24:06.467Z",
+        "updated_at": "2023-10-17T01:24:06.467Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 17,
+    "fields": {
+        "article": 1,
+        "user": 2,
+        "content": "qwryj",
+        "created_at": "2023-10-17T01:24:09.793Z",
+        "updated_at": "2023-10-17T01:24:09.793Z"
+    }
+}
+]
