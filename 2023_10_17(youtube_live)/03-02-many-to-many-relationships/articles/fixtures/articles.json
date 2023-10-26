@@ -1,0 +1,46 @@
+[
+{
+    "model": "articles.article",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "title": "가나다",
+        "content": "라마바",
+        "created_at": "2023-10-17T00:20:01.417Z",
+        "updated_at": "2023-10-17T00:20:01.417Z",
+        "like_users": [
+            1,
+            2
+        ]
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 2,
+    "fields": {
+        "user": 1,
+        "title": "바사가",
+        "content": "ㅇ라자마",
+        "created_at": "2023-10-17T00:20:11.007Z",
+        "updated_at": "2023-10-17T00:20:11.007Z",
+        "like_users": [
+            1,
+            2
+        ]
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 3,
+    "fields": {
+        "user": 2,
+        "title": "asd",
+        "content": "asdasd",
+        "created_at": "2023-10-17T01:23:03.497Z",
+        "updated_at": "2023-10-17T01:23:03.498Z",
+        "like_users": [
+            2
+        ]
+    }
+}
+]
